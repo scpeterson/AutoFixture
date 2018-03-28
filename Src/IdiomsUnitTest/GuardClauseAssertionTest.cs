@@ -1727,6 +1727,11 @@ namespace AutoFixture.IdiomsUnitTest
                     throw new ArgumentNullException(nameof(argument1));
                 }
 
+                if (argument1.Trim() == string.Empty)
+                {
+                    throw new ArgumentException(nameof(argument1));
+                }
+
                 argument2 = null;
             }
         }
